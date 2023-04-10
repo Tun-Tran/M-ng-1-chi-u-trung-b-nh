@@ -1,0 +1,24 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+bool c(int a[ ], int n){
+    if(n==-1) return true;
+    if(a[n-1]>=a[n])return false;
+     return 
+    c(a,n-1);
+}
+
+int main() {
+       long long n; cin>>n;
+    int a[n];
+    for(int i=0; i<n;i++){
+        cin>>a[i];
+    }
+    if(c(a,n-1))cout<<"YES";
+    else cout<<"NO";
+    return 0;
+}
